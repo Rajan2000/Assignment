@@ -19,10 +19,15 @@ public class ShippingAddress {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name="shippingAddress_id")
 	private Integer shippingAddress_id;
+	@Column(name="address")
 	private String address;
+	@Column(name="state")
 	private String state;
+	@Column(name="zipcode")
 	private Integer zipcode;
+	@Column(name="country")
 	private String country;
 	
 	@OneToMany(cascade=CascadeType.ALL)
