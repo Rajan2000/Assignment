@@ -20,9 +20,13 @@ public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name="user_id")
 	private Integer user_id;
+	@Column(name="emailid")
 	private String emailid;
+	@Column(name="password")
 	private String password;
+	@Column(name="enabled")
 	private String enabled;
 	
 	@OneToMany(cascade = CascadeType.ALL)
